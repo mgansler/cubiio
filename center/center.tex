@@ -1,0 +1,35 @@
+\documentclass[a4paper]{scrreprt}
+
+\usepackage{tikz}
+%  #savethetrees
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=10mm,
+	bottom=10mm
+}
+
+\newcommand{\cubiiomask}{%
+\begin{tikzpicture}[x=0.1cm, y=0.1cm]
+\draw (0, 0) rectangle (130, 123);
+\draw (17, 10) rectangle (117, 110);
+\draw[dashed] (12, 60) -- (122, 60); % horizontal center line
+\draw[dashed] (67, 5) -- (67, 115); % vertical center line
+\draw[dashed] (12, 5) -- (59.93, 52.93); \draw[dashed] (74.07, 67.07) -- (122, 115); % bottom left to top right center line
+\draw[dashed] (12, 115) -- (59.93, 67.07); \draw[dashed] (74.07, 52.93) -- (122, 5); % top left to bottom right center line
+\draw (5.1, 117.5) circle (1.5); \draw (5.1, 117.5) circle (0.2); % upper left hole
+\draw (124.5, 117.5) circle (1.5); \draw (124.5, 117.5) circle (0.2); % upper right hole
+\draw[dotted] (67, 60) circle (1cm);
+\draw[dotted] (67, 60) circle (2cm);
+\draw[dotted] (67, 60) circle (3cm);
+\draw[dotted] (67, 60) circle (4cm);
+\draw[dotted] (67, 60) circle (5cm);
+\end{tikzpicture}
+}
+
+\begin{document}
+\cubiiomask
+
+\cubiiomask
+\end{document}
